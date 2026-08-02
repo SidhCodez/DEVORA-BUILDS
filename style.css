@@ -1,0 +1,153 @@
+
+    @import url('https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&family=Michroma&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Elms Sans", sans-serif;
+      background: #0b0b0b;
+      color: #ffffff;
+    }
+
+    /* =========================
+       HERO SECTION
+    ========================= */
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 7%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-content {
+      width: 100%;
+      max-width: 1200px;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      font-family: "Michroma", sans-serif;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #8f8f8f;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 {
+      font-size: clamp(3.5rem, 9vw, 8.5rem);
+      font-weight: 700;
+      line-height: 0.9;
+      letter-spacing: -5px;
+      margin-bottom: 35px;
+    }
+
+    .hero h1 span {
+      font-family: "Michroma", sans-serif;
+      font-weight: 400;
+      display: block;
+      font-size: 0.55em;
+      letter-spacing: -1px;
+      color: #777;
+      margin-top: 15px;
+    }
+
+    .hero-description {
+      max-width: 550px;
+      margin: 0 auto 40px;
+      font-size: 17px;
+      line-height: 1.7;
+      color: #aaa;
+    }
+
+    .hero-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 15px;
+      padding: 16px 26px;
+      border: 1px solid #444;
+      border-radius: 100px;
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      transition: 0.3s ease;
+    }
+
+    .hero-button:hover {
+      background: white;
+      color: black;
+      border-color: white;
+      transform: translateY(-3px);
+    }
+
+    .hero-button span {
+      font-size: 18px;
+      transition: transform 0.3s ease;
+    }
+
+    .hero-button:hover span {
+      transform: translateX(5px);
+    }
+
+    /* Decorative Text */
+
+    .background-text {
+      position: absolute;
+      bottom: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: "Michroma", sans-serif;
+      font-size: clamp(5rem, 17vw, 16rem);
+      white-space: nowrap;
+      color: rgba(255, 255, 255, 0.025);
+      pointer-events: none;
+      user-select: none;
+    }
+
+    /* Glow */
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: rgba(255, 255, 255, 0.04);
+      border-radius: 50%;
+      filter: blur(100px);
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 768px) {
+
+      .hero {
+        padding: 60px 25px;
+      }
+
+      .hero h1 {
+        letter-spacing: -2px;
+      }
+
+      .hero-description {
+        font-size: 15px;
+      }
+
+      .background-text {
+        bottom: 20px;
+      }
+    }
