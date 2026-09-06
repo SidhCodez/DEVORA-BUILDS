@@ -4,43 +4,443 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>DEVORA BUILDS</title>
+  <title>DEVORA BUILDS — Premium Digital Product Studio</title>
+  <meta name="description" content="DEVORA BUILDS is a high-end digital product studio crafting futuristic digital experiences, brand systems, and intelligent web applications.">
   <link rel="icon" type="image/x-icon" href="images/devoraicon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&family=Michroma&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Three.js via cdnjs for lightweight 3D canvas -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 
 <body>
 
-  <section class="hero">
-
-    <div class="hero-content">
-
-      <div class="eyebrow">
-        DEVORA BUILDS
-      </div>
-
-      <h1>
-        Build Different.
-        <span>Think Beyond.</span>
-      </h1>
-
-      <p class="hero-description">
-        We design and build modern digital experiences that combine
-        bold ideas, clean interfaces, and purposeful technology.
-      </p>
-
-      <a href="#" class="hero-button">
-       COMING SOON
-        <span>→</span>
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand" aria-label="DEVORA BUILDS Homepage">
+        <span class="brand-text">DEVORA BUILDS</span>
       </a>
 
+      <nav class="nav-menu" id="navMenu">
+        <a href="#work" class="nav-link">WORK</a>
+        <a href="#services" class="nav-link">SERVICES</a>
+        <a href="#about" class="nav-link">ABOUT</a>
+        <a href="#contact" class="nav-link">CONTACT</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#contact" class="btn-cta nav-cta">
+          <span>START A PROJECT</span>
+          <span class="btn-arrow">→</span>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <!-- 3D Canvas Background -->
+      <div class="canvas-container" id="canvasContainer">
+        <canvas id="webgl-canvas"></canvas>
+      </div>
+
+      <!-- Atmospheric Glow Overlay -->
+      <div class="hero-atmosphere"></div>
+
+      <div class="hero-content">
+        <div class="eyebrow fade-in">
+          <span class="status-dot"></span> DEVORA BUILDS
+        </div>
+
+        <h1 class="hero-title fade-in">
+          BUILD DIFFERENT.
+          <span class="subtitle">THINK BEYOND.</span>
+        </h1>
+
+        <p class="hero-description fade-in">
+          We design and build digital experiences where strategy, high-end design, and purposeful technology intersect to forge unforgettable digital products.
+        </p>
+
+        <div class="hero-cta-group fade-in">
+          <a href="#contact" class="btn-primary">
+            <span>START A PROJECT</span>
+            <span class="btn-arrow">→</span>
+          </a>
+          <a href="#work" class="btn-secondary">
+            <span>VIEW OUR WORK</span>
+            <span class="btn-arrow">↓</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Subtle Background Decorative Text -->
+      <div class="background-text" aria-hidden="true">DEVORA</div>
+    </section>
+
+    <!-- STATEMENT TRANSITION SECTION -->
+    <section class="statement-section" id="about">
+      <div class="container">
+        <div class="statement-label">PHILOSOPHY</div>
+        <h2 class="statement-heading">
+          WE BUILD DIGITAL<br>EXPERIENCES THAT MOVE.
+        </h2>
+        <p class="statement-text">
+          From ambitious ideas to polished digital products, we turn complex challenges into refined, high-performance web experiences people remember.
+        </p>
+      </div>
+    </section>
+
+    <!-- SELECTED WORK PREVIEW -->
+    <section class="work-section" id="work">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">PORTFOLIO</span>
+          <h2 class="section-title">SELECTED WORK</h2>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project Card 1 -->
+          <article class="project-card">
+            <div class="project-media">
+              <div class="project-placeholder-visual p1">
+                <div class="abstract-shape s1"></div>
+              </div>
+              <div class="project-overlay">
+                <span class="view-tag">EXPLORE CASE STUDY →</span>
+              </div>
+            </div>
+            <div class="project-meta">
+              <span class="project-num">01</span>
+              <div>
+                <h3 class="project-title">Spatial Design System</h3>
+                <p class="project-cat">Brand Technology &amp; UI Architecture</p>
+              </div>
+            </div>
+            <p class="project-desc">A modular, next-generation component architecture built for immersive web and spatial interfaces.</p>
+          </article>
+
+          <!-- Project Card 2 -->
+          <article class="project-card">
+            <div class="project-media">
+              <div class="project-placeholder-visual p2">
+                <div class="abstract-shape s2"></div>
+              </div>
+              <div class="project-overlay">
+                <span class="view-tag">EXPLORE CASE STUDY →</span>
+              </div>
+            </div>
+            <div class="project-meta">
+              <span class="project-num">02</span>
+              <div>
+                <h3 class="project-title">Next-Gen AI Interface</h3>
+                <p class="project-cat">Product Design &amp; WebGL Canvas</p>
+              </div>
+            </div>
+            <p class="project-desc">Intelligent, minimal control dashboard designed for real-time generative workflow management.</p>
+          </article>
+
+          <!-- Project Card 3 -->
+          <article class="project-card">
+            <div class="project-media">
+              <div class="project-placeholder-visual p3">
+                <div class="abstract-shape s3"></div>
+              </div>
+              <div class="project-overlay">
+                <span class="view-tag">EXPLORE CASE STUDY →</span>
+              </div>
+            </div>
+            <div class="project-meta">
+              <span class="project-num">03</span>
+              <div>
+                <h3 class="project-title">Aetherium Engine</h3>
+                <p class="project-cat">Web Experiences &amp; Interactive Graphics</p>
+              </div>
+            </div>
+            <p class="project-desc">Ultra-fast web platform featuring procedural canvas visualizers and cinematic micro-interactions.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="services-section" id="services">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">CAPABILITIES</span>
+          <h2 class="section-title">WHAT WE BUILD</h2>
+        </div>
+
+        <div class="services-list">
+          <div class="service-item">
+            <div class="service-num">01</div>
+            <div class="service-content">
+              <h3 class="service-title">WEB EXPERIENCES</h3>
+              <p class="service-desc">Immersive, lightning-fast digital studio websites and web applications engineered for distinction.</p>
+            </div>
+            <div class="service-arrow">↗</div>
+          </div>
+
+          <div class="service-item">
+            <div class="service-num">02</div>
+            <div class="service-content">
+              <h3 class="service-title">PRODUCT DESIGN</h3>
+              <p class="service-desc">Human-centered UI/UX systems, design tokens, and scalable interactive interfaces crafted with precision.</p>
+            </div>
+            <div class="service-arrow">↗</div>
+          </div>
+
+          <div class="service-item">
+            <div class="service-num">03</div>
+            <div class="service-content">
+              <h3 class="service-title">AI &amp; AUTOMATION</h3>
+              <p class="service-desc">Custom AI tools, automated digital pipelines, and intelligent interfaces for modern tech companies.</p>
+            </div>
+            <div class="service-arrow">↗</div>
+          </div>
+
+          <div class="service-item">
+            <div class="service-num">04</div>
+            <div class="service-content">
+              <h3 class="service-title">DIGITAL PRODUCTS</h3>
+              <p class="service-desc">End-to-end product development from initial concept validation to modern high-scale launch.</p>
+            </div>
+            <div class="service-arrow">↗</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA SECTION -->
+    <section class="cta-section" id="contact">
+      <div class="container">
+        <div class="cta-card">
+          <div class="cta-glow"></div>
+          <span class="cta-eyebrow">READY TO ESCALATE?</span>
+          <h2 class="cta-heading">HAVE AN IDEA?<br>LET'S BUILD IT.</h2>
+          <p class="cta-text">
+            Tell us what you're imagining. We'll help turn it into an extraordinary digital reality.
+          </p>
+          <div class="cta-actions">
+            <a href="mailto:hello@devorabuilds.com" class="btn-primary large">
+              <span>START A PROJECT</span>
+              <span class="btn-arrow">→</span>
+            </a>
+            <a href="coming-soon.html" class="coming-soon-link">
+              View Original Teaser Page
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <span class="brand-text">DEVORA BUILDS</span>
+        <p class="footer-tagline">Architects of the modern web.</p>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>NAVIGATION</h4>
+          <a href="#work">WORK</a>
+          <a href="#services">SERVICES</a>
+          <a href="#about">ABOUT</a>
+          <a href="#contact">CONTACT</a>
+        </div>
+        <div class="footer-col">
+          <h4>PAGES</h4>
+          <a href="index.html">HOMEPAGE</a>
+          <a href="coming-soon.html">COMING SOON</a>
+        </div>
+      </div>
     </div>
 
-    <div class="background-text">
-      CREATE
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; <span id="year">2026</span> DEVORA BUILDS. ALL RIGHTS RESERVED.</p>
+        <div class="system-status">
+          <span class="status-dot"></span> SYSTEM OPERATIONAL
+        </div>
+      </div>
     </div>
+  </footer>
 
-  </section>
+  <!-- 3D Scene and Script Logic -->
+  <script>
+    // Set Current Year
+    document.getElementById('year').textContent = new Date().getFullYear();
 
+    // Mobile Hamburger Menu Toggle
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+
+    // Close mobile menu when clicking nav link
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+
+    // Sticky Navbar Background on Scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // THREE.JS 3D CENTERPIECE SETUP
+    (function init3D() {
+      const container = document.getElementById('canvasContainer');
+      const canvas = document.getElementById('webgl-canvas');
+
+      if (!window.THREE) return;
+
+      // Detect reduced motion preference
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      // Scene, Camera, Renderer
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight, 0.1, 1000);
+      camera.position.z = 7;
+
+      const renderer = new THREE.WebGLRenderer({
+        canvas: canvas,
+        alpha: true,
+        antialias: true,
+        powerPreference: 'high-performance'
+      });
+
+      renderer.setSize(container.clientWidth, container.clientHeight);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+      // Create Futuristic Sculptural Geometry: Abstract Torus Knot / Interlocking Mesh
+      const geometry = new THREE.TorusKnotGeometry(1.6, 0.42, 120, 16);
+
+      // Dark Metallic Wireframe Material with Subtle Glow Accent
+      const material = new THREE.MeshStandardMaterial({
+        color: 0x1f1f1f,
+        metalness: 0.85,
+        roughness: 0.2,
+        wireframe: true,
+        emissive: 0x111111,
+      });
+
+      const mesh = new THREE.Mesh(geometry, material);
+      scene.add(mesh);
+
+      // Inner Solid Core Structure
+      const coreGeometry = new THREE.IcosahedronGeometry(1.1, 2);
+      const coreMaterial = new THREE.MeshPhysicalMaterial({
+        color: 0x0f0f0f,
+        roughness: 0.1,
+        metalness: 0.9,
+        clearcoat: 0.5,
+        clearcoatRoughness: 0.1
+      });
+      const coreMesh = new THREE.Mesh(coreGeometry, coreMaterial);
+      scene.add(coreMesh);
+
+      // Lighting Setup
+      const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
+      scene.add(ambientLight);
+
+      const pointLight1 = new THREE.PointLight(0xffffff, 2, 20);
+      pointLight1.position.set(5, 5, 5);
+      scene.add(pointLight1);
+
+      const pointLight2 = new THREE.PointLight(0x444444, 1.5, 20);
+      pointLight2.position.set(-5, -5, -2);
+      scene.add(pointLight2);
+
+      // Mouse Parallax Interaction
+      let mouseX = 0;
+      let mouseY = 0;
+      let targetX = 0;
+      let targetY = 0;
+
+      const windowHalfX = window.innerWidth / 2;
+      const windowHalfY = window.innerHeight / 2;
+
+      document.addEventListener('mousemove', (e) => {
+        mouseX = (e.clientX - windowHalfX) * 0.0005;
+        mouseY = (e.clientY - windowHalfY) * 0.0005;
+      });
+
+      // Scroll Parallax Interaction
+      let scrollY = 0;
+      window.addEventListener('scroll', () => {
+        scrollY = window.scrollY;
+      });
+
+      // Animation Loop
+      let clock = new THREE.Clock();
+
+      function animate() {
+        requestAnimationFrame(animate);
+
+        const delta = clock.getDelta();
+        const time = clock.getElapsedTime();
+
+        if (!prefersReducedMotion) {
+          // Slow subtle rotation
+          mesh.rotation.x = time * 0.15;
+          mesh.rotation.y = time * 0.2;
+
+          coreMesh.rotation.x = -time * 0.1;
+          coreMesh.rotation.y = -time * 0.15;
+
+          // Mouse response smoothing
+          targetX += (mouseX - targetX) * 0.05;
+          targetY += (mouseY - targetY) * 0.05;
+
+          mesh.rotation.y += targetX;
+          mesh.rotation.x += targetY;
+
+          // Scroll depth movement
+          mesh.position.y = -scrollY * 0.001;
+          coreMesh.position.y = -scrollY * 0.001;
+        }
+
+        renderer.render(scene, camera);
+      }
+
+      animate();
+
+      // Handle Resize
+      window.addEventListener('resize', () => {
+        camera.aspect = container.clientWidth / container.clientHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(container.clientWidth, container.clientHeight);
+      });
+    })();
+  </script>
 </body>
 </html>
